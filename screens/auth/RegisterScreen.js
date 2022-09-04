@@ -179,11 +179,11 @@ const styles = StyleSheet.create({
         width: 25,
         height: 25,
         borderColor: '#FF6C00',
+        backgroundColor: '#ffffff',
         borderWidth: 1,
         borderRadius: 50,
         justifyContent: 'center',
         alignItems: 'center',
-        fontSize: 40,
     },
   text: {
     textAlign: 'center',

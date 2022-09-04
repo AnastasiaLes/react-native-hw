@@ -1,32 +1,17 @@
 import { StatusBar } from 'expo-status-bar';
 import { useState, useEffect } from 'react';
 import {} from 'react-native';
-import RegisterScreen from './screens/auth/RegisterScreen';
-import LoginScreen from './screens/auth/LoginScreen';
-import { createStackNavigator } from '@react-navigation/stack';
-import { NavigationContainer } from '@react-navigation/native';
 
-const AuthStack = createStackNavigator();
+import { NavigationContainer } from '@react-navigation/native';
+import { useRoute } from './router';
+
 
 export default function App() {
   
-  
+  const routing = useRoute({})
   return (
     <NavigationContainer>
-      <AuthStack.Navigator>
-        <AuthStack.Screen
-          options={{
-          headerShown: false
-        }}
-          name='Register'
-          component={RegisterScreen} />
-        <AuthStack.Screen
-          options={{
-          headerShown: false
-        }}
-          name='Login'
-          component={LoginScreen} />
-      </AuthStack.Navigator>  
+      {routing}
     </NavigationContainer> 
   )
 }

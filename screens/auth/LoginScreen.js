@@ -108,14 +108,13 @@ export default function LoginScreen({navigation}) {
               <Text style={styles.buttonText}>Войти</Text>
             </TouchableOpacity>
     
-            <Text
-                style={styles.loginText}
-                onPress={() => navigation.navigate('Register')}
-            >
+            <TouchableOpacity style={styles.login}
+                onPress={() => navigation.navigate('Register')}>
+                <Text
+                    style={styles.loginText}>
                 Нет аккаунта? Зарегистрироваться
-            </Text>
-
-          
+            </Text>              
+            </TouchableOpacity>
           
           </View>
             </KeyboardAvoidingView> 
@@ -177,17 +176,13 @@ const styles = StyleSheet.create({
     color: '#ffffff',
     fontSize: 16,
   },
-//   login: {
-//     alignItems: 'center',
-//     marginTop: 16,
-//     marginBottom: 66,
-//     // cursor: 'pointer',
-//   },
-    loginText: {
-       alignItems: 'center',
+  login: {
+    alignItems: 'center',
     marginTop: 16,
-        marginBottom: 66,
-    
+    marginBottom: 66,
+    // cursor: 'pointer',
+  },
+    loginText: {
     color: '#1B4371',
     fontSize: 16,
   }
