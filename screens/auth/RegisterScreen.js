@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { useState, useEffect } from 'react';
-import { Dimensions, Keyboard, TouchableWithoutFeedback, KeyboardAvoidingView, TouchableOpacity, Button, ImageBackground, StyleSheet, Text, TextInput, View, Platform } from 'react-native';
+import { Dimensions, Image, Keyboard, TouchableWithoutFeedback, KeyboardAvoidingView, TouchableOpacity, Button, ImageBackground, StyleSheet, Text, TextInput, View, Platform } from 'react-native';
 
 const initialState = {
   login: '',
@@ -79,7 +79,11 @@ export default function RegisterScreen({navigation}) {
             marginBottom: keyboardShown ? 50 : 0,
           }}>
             <View>
-              
+                <View style={styles.imageAdd}>
+                                  <View style={styles.plusSign}>
+                                      <Image source={require('../../assets/images/Union.png')} />
+                                  </View>        
+                </View>
             <Text style={styles.text}>Регистрация</Text>
             <TextInput
                 placeholder={'Логин'}
@@ -143,27 +147,50 @@ export default function RegisterScreen({navigation}) {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  image: {
-    flex: 1,
-    justifyContent: 'flex-end',
-    resizeMode: 'cover',
-  },
-  formContainer: {
-    backgroundColor: '#fff',
-    borderTopRightRadius: 25, 
-    borderTopLeftRadius: 25,
-    alignItems: 'center',
-    // padding: 16,
-  },
+    container: {
+        flex: 1,
+    },
+    image: {
+        flex: 1,
+        justifyContent: 'flex-end',
+        resizeMode: 'cover',
+    },
+    formContainer: {
+        backgroundColor: '#fff',
+        borderTopRightRadius: 25, 
+        borderTopLeftRadius: 25,
+        alignItems: 'center',
+        // padding: 16,
+    },
+    imageAdd: {
+        width: 120,
+        height: 120,
+        position: 'relative',
+        backgroundColor: '#F6F6F6',
+        marginTop: -60,
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        borderRadius: 16,
+    },
+    plusSign: {
+        position: 'absolute',
+        right: -12,
+        bottom: 14,
+        width: 25,
+        height: 25,
+        borderColor: '#FF6C00',
+        borderWidth: 1,
+        borderRadius: 50,
+        justifyContent: 'center',
+        alignItems: 'center',
+        fontSize: 40,
+    },
   text: {
     textAlign: 'center',
     fontSize: 30,
     // fontStyle: 'bold',
-    marginTop: 92,
-    marginBottom: 33,
+    marginTop: 32,
+      marginBottom: 33,
   },
   // inputsGroup: {
   //   marginBottom: 32,
