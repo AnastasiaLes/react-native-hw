@@ -43,10 +43,10 @@ export const useRoute = (isAuth) => {
     >
         <MainTab.Screen
             options={{
-                // headerTitle: (props) => <LogoTitle {...props} />,
-                headerLeft: () => <Ionicons
-                    onPress={() => alert('This is a button!')}
-                    name="arrow-back" size={24} color="black" />,
+                headerTitle: 'Публикации',
+                headerRight: () => <Ionicons
+                    onPress={() => alert('Logout')}
+                    name="exit-outline" size={24} color='#BDBDBD' />,
                 tabBarIcon: ({focused, size, color}) =>
                     <AntDesign
                         name="appstore-o" size={size} color={color} />
@@ -54,6 +54,10 @@ export const useRoute = (isAuth) => {
             name='Posts' component={PostsScreen} />
         <MainTab.Screen
             options={{
+                headerTitle: 'Создать публикацию',
+                headerLeft: () => <Ionicons
+                    onPress={() => alert('This is a button!')}
+                    name="arrow-back" size={24} color="#212121" />,
                 tabBarIcon: ({focused, size, color}) =>
                 <AntDesign name="pluscircle" size={size} color={color} />
             }}
@@ -61,6 +65,7 @@ export const useRoute = (isAuth) => {
             component={CreatePostsScreen} />
         <MainTab.Screen
             options={{
+                headerShown: false,
                 tabBarIcon: ({focused, size, color}) =>
                 <Feather name="user" size={size} color={color} />
             }}
