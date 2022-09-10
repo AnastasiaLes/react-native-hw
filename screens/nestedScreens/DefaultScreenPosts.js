@@ -21,8 +21,6 @@ const DefaultScreenPosts = ({ route, navigation }) => {
         }
         
     }, [route.params])
-
-    const commentBtn = () => navigation.navigate('Comments')
      
     console.log(posts.length)
     return (

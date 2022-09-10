@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from 'react';
-import { Camera, CameraType } from 'expo-camera';
+import { Camera } from 'expo-camera';
 import * as Location from 'expo-location';
 import { FontAwesome } from '@expo/vector-icons'; 
 import { SimpleLineIcons } from '@expo/vector-icons';
